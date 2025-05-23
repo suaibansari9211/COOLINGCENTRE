@@ -1,4 +1,4 @@
-// List of services
+// Service definitions
 const services = [
   {
     name: "AC Installation",
@@ -44,7 +44,6 @@ const services = [
   }
 ];
 
-// Supported image extensions
 const extensions = ["jpg", "jpeg", "png"];
 
 // Helper to check if image exists (async, so we use fallback if not found)
@@ -66,6 +65,21 @@ function getImagePath(key, callback) {
 
 // Render services
 window.addEventListener("DOMContentLoaded", () => {
+  // 3D Interactive Title
+  const title = document.getElementById("main-title");
+  document.addEventListener("mousemove", function(e) {
+    if (window.innerWidth < 700) return;
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    title.style.transform = `rotateY(${x * 18}deg) rotateX(${-y * 18}deg) scale3d(1.13,1.13,1.02)`;
+    title.style.textShadow = `${-x*24}px ${y*24}px 36px #00bfae55, 0 8px 32px rgba(0,0,0,0.28)`;
+  });
+  document.addEventListener("mouseleave", function() {
+    title.style.transform = "";
+    title.style.textShadow = "";
+  });
+
+  // Render service cards
   const grid = document.getElementById("services-grid");
   services.forEach((service, i) => {
     getImagePath(service.key, (imgPath) => {
@@ -81,9 +95,31 @@ window.addEventListener("DOMContentLoaded", () => {
         <p>${service.desc}</p>
         <a class="enquiry-btn" href="https://wa.me/918418944572?text=${waMsg}" target="_blank">Enquiry via WhatsApp</a>
       `;
+      // 3D hover effect and image scale
+      card.addEventListener("mousemove", function(e) {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `scale3d(1.07,1.07,1.02) rotateY(${x*14}deg) rotateX(${-y*14}deg)`;
+        card.querySelector("img").style.transform = `scale(1.18) rotateZ(${x*8}deg)`;
+      });
+      card.addEventListener("mouseleave", function() {
+        card.style.transform = "";
+        card.querySelector("img").style.transform = "";
+      });
       grid.appendChild(card);
-      // Refresh AOS
       if (window.AOS) AOS.refresh();
     });
+  });
+
+  // Optional: Service image swap on scroll (parallax-like)
+  let lastScroll = 0;
+  window.addEventListener("scroll", function() {
+    const cards = document.querySelectorAll('.service-card img');
+    let scrollY = window.scrollY;
+    cards.forEach((img, idx) => {
+      img.style.transform += ` translateY(${Math.sin(scrollY/100 + idx)*10}px)`;
+    });
+    lastScroll = scrollY;
   });
 });
