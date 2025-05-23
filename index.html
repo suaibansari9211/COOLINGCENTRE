@@ -4,18 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cooling Centre | AC & Cooling Services</title>
-  <meta name="description" content="Cooling Centre offers expert AC installation, repair, and maintenance. Contact us via WhatsApp or call for fast, reliable cooling solutions.">
+  <meta name="description" content="Cooling Centre offers expert AC installation, repair, maintenance, cleaning, and more. Contact us via WhatsApp or call for fast, reliable cooling solutions.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- WhatsApp Icon CDN -->
+  <!-- Animate On Scroll Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <!-- Bootstrap Icons for contact icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
   <header>
     <div class="hero-bg"></div>
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-down">
       <h1>Cooling Centre</h1>
-      <p>Expert AC Installation, Repair & Cooling Solutions.<br>
+      <p>Expert AC Installation, Repair, Maintenance, and Cooling Solutions.<br>
         Stay cool and comfortable, always!</p>
       <a href="#contact" class="cta-btn">Contact Us Now</a>
     </div>
@@ -24,82 +26,99 @@
   <main>
     <!-- Services Section -->
     <section id="services">
-      <h2>Our Services</h2>
+      <h2 data-aos="fade-up">Our Services</h2>
       <div class="services-grid">
-        <!-- Service 1 -->
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/3964737/pexels-photo-3964737.jpeg?auto=compress&w=400&h=400&fit=crop" alt="AC Installation">
+        <!-- Service 1: AC Installation -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="AC Installation">
           <h3>AC Installation</h3>
-          <p>Professional air conditioner installation for homes and offices. Fast, safe, and reliable setup by certified experts.</p>
+          <p>Professional air conditioner installation for homes and offices. Fast, safe, and reliable setup by certified experts, ensuring optimal performance and energy efficiency.</p>
           <a class="enquiry-btn"
              href="https://wa.me/918418944572?text=Hello%2C%20I%20am%20interested%20in%20AC%20Installation.%20Please%20provide%20more%20details."
-             target="_blank">
-            Enquiry via WhatsApp
-          </a>
+             target="_blank">Enquiry via WhatsApp</a>
         </div>
-        <!-- Service 2 -->
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/3964745/pexels-photo-3964745.jpeg?auto=compress&w=400&h=400&fit=crop" alt="AC Repair">
+        <!-- Service 2: AC Repair -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.pexels.com/photos/3964737/pexels-photo-3964737.jpeg?auto=compress&w=400&h=400&fit=crop" alt="AC Repair">
           <h3>AC Repair</h3>
-          <p>Quick diagnosis and repair of all AC brands and models. Restore your comfort with our prompt repair service.</p>
+          <p>Quick diagnosis and repair of all AC brands and models. Restore your comfort with our prompt, reliable, and affordable repair services.</p>
           <a class="enquiry-btn"
              href="https://wa.me/918418944572?text=Hello%2C%20I%20want%20to%20know%20about%20AC%20Repair%20services."
-             target="_blank">
-            Enquiry via WhatsApp
-          </a>
+             target="_blank">Enquiry via WhatsApp</a>
         </div>
-        <!-- Service 3 -->
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/3964736/pexels-photo-3964736.jpeg?auto=compress&w=400&h=400&fit=crop" alt="AC Maintenance">
+        <!-- Service 3: AC Maintenance -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="AC Maintenance">
           <h3>AC Maintenance</h3>
-          <p>Regular servicing to keep your AC running efficiently. Prevent breakdowns and save on energy bills.</p>
+          <p>Regular servicing to keep your AC running efficiently. Prevent breakdowns, extend lifespan, and save on energy bills with our maintenance plans.</p>
           <a class="enquiry-btn"
              href="https://wa.me/918418944572?text=Hello%2C%20I%20want%20to%20enquire%20about%20AC%20Maintenance%20plans."
-             target="_blank">
-            Enquiry via WhatsApp
-          </a>
+             target="_blank">Enquiry via WhatsApp</a>
         </div>
-        <!-- Service 4 -->
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/3964741/pexels-photo-3964741.jpeg?auto=compress&w=400&h=400&fit=crop" alt="HVAC Solutions">
+        <!-- Service 4: AC Cleaning -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.pexels.com/photos/3964741/pexels-photo-3964741.jpeg?auto=compress&w=400&h=400&fit=crop" alt="AC Cleaning">
+          <h3>AC Cleaning</h3>
+          <p>Deep cleaning of filters, coils, and ducts to improve air quality and cooling efficiency. Recommended at least once a year for healthy indoor air.</p>
+          <a class="enquiry-btn"
+             href="https://wa.me/918418944572?text=Hello%2C%20I%20want%20to%20know%20about%20AC%20Cleaning%20services."
+             target="_blank">Enquiry via WhatsApp</a>
+        </div>
+        <!-- Service 5: HVAC Solutions -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="HVAC Solutions">
           <h3>HVAC Solutions</h3>
-          <p>Complete heating, ventilation, and air conditioning solutions for residential and commercial spaces.</p>
+          <p>Complete heating, ventilation, and air conditioning solutions for residential, commercial, and industrial spaces. Custom designs for every need.</p>
           <a class="enquiry-btn"
              href="https://wa.me/918418944572?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20HVAC%20Solutions."
-             target="_blank">
-            Enquiry via WhatsApp
-          </a>
+             target="_blank">Enquiry via WhatsApp</a>
         </div>
-        <!-- Service 5 -->
-        <div class="service-card">
-          <img src="https://images.pexels.com/photos/3964744/pexels-photo-3964744.jpeg?auto=compress&w=400&h=400&fit=crop" alt="Cooling Centre Access">
+        <!-- Service 6: Cooling Centre Access -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1503389152951-9c3d0bca6c94?auto=format&fit=crop&w=400&q=80" alt="Cooling Centre Access">
           <h3>Cooling Centre Access</h3>
-          <p>Safe, air-conditioned spaces for community relief during heatwaves. Stay cool and hydrated with us.</p>
+          <p>Safe, air-conditioned spaces for community relief during heatwaves. Stay cool, hydrated, and protected from extreme temperatures.</p>
           <a class="enquiry-btn"
              href="https://wa.me/918418944572?text=Hello%2C%20I%20want%20to%20know%20about%20Cooling%20Centre%20access%20and%20timings."
-             target="_blank">
-            Enquiry via WhatsApp
-          </a>
+             target="_blank">Enquiry via WhatsApp</a>
+        </div>
+        <!-- Service 7: Emergency AC Support -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+          <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=400&q=80" alt="Emergency AC Support">
+          <h3>Emergency AC Support</h3>
+          <p>24/7 emergency AC repair and support. Fast response to restore your comfort during urgent breakdowns or heatwaves.</p>
+          <a class="enquiry-btn"
+             href="https://wa.me/918418944572?text=Hello%2C%20I%20need%20emergency%20AC%20support."
+             target="_blank">Enquiry via WhatsApp</a>
+        </div>
+        <!-- Service 8: Commercial AC Solutions -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Commercial AC Solutions">
+          <h3>Commercial AC Solutions</h3>
+          <p>Design, installation, and maintenance of large-scale AC systems for offices, malls, hospitals, and more. Efficient, scalable, and reliable.</p>
+          <a class="enquiry-btn"
+             href="https://wa.me/918418944572?text=Hello%2C%20I%20want%20to%20discuss%20commercial%20AC%20solutions."
+             target="_blank">Enquiry via WhatsApp</a>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-      <h2>About Cooling Centre</h2>
-      <p style="max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.1rem;">
-        Cooling Centre is your trusted partner for all air conditioning and cooling needs.  
-        With years of experience, we provide professional AC installation, repair, and maintenance services for homes, offices, and commercial spaces.  
-        Our mission is to keep you comfortable and safe, especially during extreme heat.  
-        <br><br>
+      <h2 data-aos="fade-up">About Cooling Centre</h2>
+      <p style="max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.1rem;" data-aos="fade-up" data-aos-delay="100">
+        Cooling Centre is your trusted partner for all air conditioning and cooling needs.<br>
+        With years of experience, we provide professional AC installation, repair, maintenance, cleaning, and emergency support for homes, offices, and commercial spaces.<br>
+        Our mission is to keep you comfortable, safe, and healthy, especially during extreme heat.<br>
+        <br>
         <b>Contact us today for a cool, comfortable tomorrow!</b>
       </p>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-card">
+      <h2 data-aos="fade-up">Contact Us</h2>
+      <div class="contact-card" data-aos="zoom-in">
         <p><b>Phone:</b> <a href="tel:918418944572">+91 84189 44572</a></p>
         <p><b>Email:</b> <a href="mailto:mdzubair7752@gmail.com">mdzubair7752@gmail.com</a></p>
         <div class="contact-icons">
@@ -123,6 +142,12 @@
   <footer>
     &copy; 2025 Cooling Centre | All rights reserved.
   </footer>
+
+  <!-- Animate On Scroll JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: true });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
