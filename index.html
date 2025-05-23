@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooling Centere - Professional AC Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Cooling Centere</h1>
+                <p>Professional Cooling Solutions</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Expert Cooling Solutions for Your Comfort</h2>
+                    <p>Professional AC installation, repair and maintenance services with guaranteed satisfaction</p>
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Click any service to contact us via WhatsApp</p>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card" onclick="redirectToWhatsApp('AC Installation Service')">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>AC Installation</h3>
+                        <p>Professional installation of all AC types with warranty</p>
+                        <div class="service-cta">
+                            <span>Contact Now <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card" onclick="redirectToWhatsApp('AC Repair Service')">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>AC Repair</h3>
+                        <p>Fast and reliable repair for all AC brands and models</p>
+                        <div class="service-cta">
+                            <span>Contact Now <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card" onclick="redirectToWhatsApp('AC Maintenance Service')">
+                        <div class="service-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>AC Maintenance</h3>
+                        <p>Regular maintenance to keep your AC running efficiently</p>
+                        <div class="service-cta">
+                            <span>Contact Now <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card" onclick="redirectToWhatsApp('Emergency AC Service')">
+                        <div class="service-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Emergency Service</h3>
+                        <p>24/7 emergency AC services when you need it most</p>
+                        <div class="service-cta">
+                            <span>Contact Now <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About Cooling Centere</h2>
+                    <p>With over 10 years of experience in the cooling industry, Cooling Centere provides top-quality AC services with a focus on customer satisfaction and technical excellence.</p>
+                    <p>Our team of certified technicians is equipped to handle all your cooling needs, from installation to repair and maintenance.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Certified Technicians</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Same-Day Service</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Warranty on Services</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Transparent Pricing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1607582278038-6a6a65c340ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="AC Technician">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Get in touch for all your cooling needs</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>Quickest way to reach us</p>
+                        <a href="https://wa.me/918418944572" class="btn btn-outline">Chat Now</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+91 84189 44572</p>
+                        <a href="tel:+918418944572" class="btn btn-outline">Call Now</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@coolingcentere.com</p>
+                        <a href="mailto:info@coolingcentere.com" class="btn btn-outline">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cooling Centere</h3>
+                    <p>Your trusted cooling service provider</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Cooling Centere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // WhatsApp redirect function with service name
+        function redirectToWhatsApp(serviceName) {
+            const message = `Hi Cooling Centere, I'm interested in your ${serviceName}. Please provide more details.`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/918418944572?text=${encodedMessage}`, '_blank');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
