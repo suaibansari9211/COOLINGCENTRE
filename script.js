@@ -1,4 +1,3 @@
-// Service definitions
 const services = [
   {
     name: "AC Installation",
@@ -46,7 +45,6 @@ const services = [
 
 const extensions = ["jpg", "jpeg", "png"];
 
-// Helper to check if image exists (async, so we use fallback if not found)
 function getImagePath(key, callback) {
   let idx = 0;
   function tryNext() {
@@ -63,7 +61,6 @@ function getImagePath(key, callback) {
   tryNext();
 }
 
-// Render services
 window.addEventListener("DOMContentLoaded", () => {
   // 3D Interactive Title
   const title = document.getElementById("main-title");
@@ -71,8 +68,8 @@ window.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth < 700) return;
     const x = (e.clientX / window.innerWidth - 0.5) * 2;
     const y = (e.clientY / window.innerHeight - 0.5) * 2;
-    title.style.transform = `rotateY(${x * 18}deg) rotateX(${-y * 18}deg) scale3d(1.13,1.13,1.02)`;
-    title.style.textShadow = `${-x*24}px ${y*24}px 36px #00bfae55, 0 8px 32px rgba(0,0,0,0.28)`;
+    title.style.transform = `rotateY(${x * 18}deg) rotateX(${-y * 18}deg) scale3d(1.18,1.18,1.04)`;
+    title.style.textShadow = `${-x*24}px ${y*24}px 36px #00bfae55, 0 12px 44px rgba(0,0,0,0.34)`;
   });
   document.addEventListener("mouseleave", function() {
     title.style.transform = "";
@@ -100,8 +97,8 @@ window.addEventListener("DOMContentLoaded", () => {
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = `scale3d(1.07,1.07,1.02) rotateY(${x*14}deg) rotateX(${-y*14}deg)`;
-        card.querySelector("img").style.transform = `scale(1.18) rotateZ(${x*8}deg)`;
+        card.style.transform = `scale3d(1.10,1.10,1.03) rotateY(${x*14}deg) rotateX(${-y*14}deg)`;
+        card.querySelector("img").style.transform = `scale(1.25) rotateZ(${x*8}deg)`;
       });
       card.addEventListener("mouseleave", function() {
         card.style.transform = "";
@@ -110,16 +107,5 @@ window.addEventListener("DOMContentLoaded", () => {
       grid.appendChild(card);
       if (window.AOS) AOS.refresh();
     });
-  });
-
-  // Optional: Service image swap on scroll (parallax-like)
-  let lastScroll = 0;
-  window.addEventListener("scroll", function() {
-    const cards = document.querySelectorAll('.service-card img');
-    let scrollY = window.scrollY;
-    cards.forEach((img, idx) => {
-      img.style.transform += ` translateY(${Math.sin(scrollY/100 + idx)*10}px)`;
-    });
-    lastScroll = scrollY;
   });
 });
