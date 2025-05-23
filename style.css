@@ -6,7 +6,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Montserrat', 'Quicksand', Arial, sans-serif;
   background: transparent;
   min-height: 100vh;
   position: relative;
@@ -25,8 +25,8 @@ body, html {
   top: 0; left: 0; width: 100vw; height: 100vh;
   z-index: -2;
   background: rgba(255,255,255,0.18);
-  backdrop-filter: blur(3.5px) saturate(1.12);
-  -webkit-backdrop-filter: blur(3.5px) saturate(1.12);
+  backdrop-filter: blur(4px) saturate(1.12);
+  -webkit-backdrop-filter: blur(4px) saturate(1.12);
 }
 .top-contact {
   width: 100%;
@@ -41,7 +41,7 @@ body, html {
 .contact-icons a {
   margin-left: 1.2rem;
   color: var(--accent);
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   transition: color 0.2s, transform 0.2s;
 }
 .contact-icons a:hover {
@@ -55,13 +55,24 @@ header {
   position: relative;
   z-index: 1;
 }
+.main-title-box {
+  display: inline-block;
+  background: rgba(255,255,255,0.22);
+  border-radius: 24px;
+  box-shadow: 0 8px 48px rgba(0,191,174,0.12), 0 2px 8px #00bfae22;
+  padding: 1.1rem 2.8rem 1.2rem 2.8rem;
+  margin-bottom: 0.7rem;
+  backdrop-filter: blur(5px);
+  border: 2.5px solid #00bfae55;
+}
 #main-title {
-  font-size: 4.2rem;
+  font-size: 4.9rem;
+  font-family: 'Quicksand', 'Montserrat', Arial, sans-serif;
   font-weight: 900;
   color: #fff;
-  letter-spacing: 2.5px;
+  letter-spacing: 3.5px;
   text-shadow: 0 12px 44px rgba(0,0,0,0.34), 0 2px 6px #00bfae88;
-  margin-bottom: 0.3rem;
+  margin: 0;
   transition: transform 0.2s cubic-bezier(.21,1.02,.73,1.01), text-shadow 0.2s;
   will-change: transform;
   cursor: pointer;
@@ -73,10 +84,10 @@ header {
 }
 .subtitle {
   color: #e0f7fa;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.45rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
   text-shadow: 0 2px 10px #2225;
 }
 main {
@@ -88,19 +99,21 @@ main {
 }
 h2 {
   text-align: center;
-  font-size: 2.1rem;
+  font-size: 2.3rem;
   margin-bottom: 1.5rem;
   color: var(--accent);
   text-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  font-family: 'Quicksand', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
 }
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.3rem;
   margin-bottom: 2rem;
 }
 .service-card {
-  background: rgba(255,255,255,0.87);
+  background: rgba(255,255,255,0.75);
   border-radius: var(--card-radius);
   box-shadow: var(--shadow);
   padding: 2.2rem 1.1rem 1.7rem 1.1rem;
@@ -110,11 +123,13 @@ h2 {
   will-change: transform;
   cursor: pointer;
   overflow: hidden;
-  backdrop-filter: blur(1.5px) saturate(1.02);
+  /* Blurry glass effect */
+  backdrop-filter: blur(12px) saturate(1.02);
+  -webkit-backdrop-filter: blur(12px) saturate(1.02);
 }
 .service-card img {
-  width: 210px;
-  max-width: 90%;
+  width: 240px;
+  max-width: 95%;
   aspect-ratio: 1/1;
   border-radius: 16px;
   margin-bottom: 1.2rem;
@@ -126,13 +141,14 @@ h2 {
 .service-card h3 {
   margin: 0.5rem 0 0.7rem 0;
   color: var(--accent);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
+  font-family: 'Quicksand', 'Montserrat', Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 .service-card p {
   color: #222;
-  font-size: 1.13rem;
+  font-size: 1.18rem;
   margin-bottom: 1.1rem;
 }
 .enquiry-btn {
@@ -143,8 +159,8 @@ h2 {
   padding: 0.6rem 1.3rem;
   border: none;
   border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.08rem;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s, transform 0.18s;
@@ -165,11 +181,12 @@ h2 {
 }
 .map-responsive {
   overflow: hidden;
-  padding-bottom: 56.25%;
+  padding-bottom: 14%;
   position: relative;
   height: 0;
   border-radius: 14px;
   box-shadow: var(--shadow);
+  margin-bottom: 1.2rem;
 }
 .map-responsive iframe {
   left: 0;
@@ -177,6 +194,51 @@ h2 {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+.big-contact {
+  background: rgba(255,255,255,0.93);
+  border-radius: 20px;
+  box-shadow: 0 2px 18px rgba(0,191,174,0.13);
+  max-width: 700px;
+  margin: 2rem auto 1.5rem auto;
+  padding: 2rem 1.5rem 1.3rem 1.5rem;
+  text-align: center;
+  font-size: 1.13rem;
+  backdrop-filter: blur(3px);
+}
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  background: var(--accent);
+  box-shadow: 0 2px 10px rgba(0,191,174,0.08);
+  transition: background 0.2s, transform 0.18s;
+}
+.contact-btn.whatsapp { background: #25d366; }
+.contact-btn.call { background: #009e93; }
+.contact-btn.email { background: #007bff; }
+.contact-btn:hover {
+  background: #222;
+  color: #fff;
+  transform: scale(1.08);
+}
+.contact-desc {
+  color: #222;
+  font-size: 1.11rem;
+  margin-top: 0.8rem;
 }
 .reviews-grid {
   display: flex;
@@ -193,7 +255,7 @@ h2 {
   max-width: 320px;
   min-width: 220px;
   text-align: center;
-  font-size: 1.03rem;
+  font-size: 1.13rem;
 }
 .review-card span {
   display: block;
@@ -227,15 +289,19 @@ footer {
 }
 @media (max-width: 900px) {
   #main-title { font-size: 2.4rem; }
+  .main-title-box { padding: 0.7rem 1.1rem;}
   .services-grid { gap: 1.2rem; }
   .service-card img { width: 120px; }
 }
 @media (max-width: 600px) {
   .top-contact { padding-right: 0.8rem; }
-  #main-title { font-size: 1.6rem; }
+  #main-title { font-size: 1.3rem; }
+  .main-title-box { padding: 0.4rem 0.5rem;}
   .subtitle { font-size: 0.97rem; }
   .services-grid { grid-template-columns: 1fr; }
   .service-card { padding: 1.2rem 0.5rem 1rem 0.5rem; }
   .service-card img { width: 90px; }
   .reviews-grid { flex-direction: column; align-items: center;}
+  .big-contact { padding: 1rem 0.5rem; }
+  .contact-row { flex-direction: column; gap: 0.7rem;}
 }
