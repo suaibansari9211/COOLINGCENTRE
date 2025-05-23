@@ -25,82 +25,8 @@
     <!-- Services Section with Dynamic Images -->
     <section id="services">
       <h2 data-aos="fade-up">Our Services</h2>
-      <div class="services-grid">
-        <?php
-        // List of services and their details
-        $services = [
-          [
-            'name' => 'AC Installation',
-            'key' => 'ac_installation',
-            'desc' => 'Certified installation of all AC types for homes and offices.',
-            'wa'   => 'Hello, I want AC installation.'
-          ],
-          [
-            'name' => 'AC Repair',
-            'key' => 'ac_repair',
-            'desc' => 'Fast, reliable repairs for all brands and models.',
-            'wa'   => 'Hello, I want AC repair.'
-          ],
-          [
-            'name' => 'AC Maintenance',
-            'key' => 'ac_maintenance',
-            'desc' => 'Annual and seasonal maintenance packages for efficient cooling.',
-            'wa'   => 'Hello, I want AC maintenance.'
-          ],
-          [
-            'name' => 'AC Cleaning',
-            'key' => 'ac_cleaning',
-            'desc' => 'Deep cleaning of filters, coils, and ducts for healthy air.',
-            'wa'   => 'Hello, I want AC cleaning.'
-          ],
-          [
-            'name' => 'HVAC Solutions',
-            'key' => 'hvac_solutions',
-            'desc' => 'Custom HVAC solutions for homes, offices, and industries.',
-            'wa'   => 'Hello, I want to know about HVAC solutions.'
-          ],
-          [
-            'name' => 'Emergency AC Support',
-            'key' => 'emergency_ac_support',
-            'desc' => '24/7 emergency AC repair and support.',
-            'wa'   => 'Hello, I need emergency AC support.'
-          ],
-          [
-            'name' => 'Commercial AC Solutions',
-            'key' => 'commercial_ac_solutions',
-            'desc' => 'Design, installation, and maintenance for large-scale AC systems.',
-            'wa'   => 'Hello, I want to discuss commercial AC solutions.'
-          ]
-        ];
-
-        // Supported image extensions
-        $extensions = ['jpg', 'jpeg', 'png'];
-
-        foreach ($services as $i => $service) {
-          $imgPath = '';
-          foreach ($extensions as $ext) {
-            $testPath = "images/{$service['key']}.$ext";
-            if (file_exists($testPath)) {
-              $imgPath = $testPath;
-              break;
-            }
-          }
-          // Fallback image if not found
-          if (!$imgPath) {
-            $imgPath = "images/default.jpg";
-          }
-          $delay = 50 + $i * 50;
-          $waMsg = urlencode($service['wa']);
-          echo <<<HTML
-          <div class="service-card" data-aos="fade-up" data-aos-delay="{$delay}">
-            <img src="{$imgPath}" alt="{$service['name']}">
-            <h3>{$service['name']}</h3>
-            <p>{$service['desc']}</p>
-            <a class="enquiry-btn" href="https://wa.me/918418944572?text={$waMsg}" target="_blank">Enquiry via WhatsApp</a>
-          </div>
-HTML;
-        }
-        ?>
+      <div class="services-grid" id="services-grid">
+        <!-- Service cards will be injected by script.js -->
       </div>
     </section>
 
