@@ -11,6 +11,7 @@ const services = [
     desc: "Fast, reliable repairs for all brands and models.",
     wa: "Hello, I want AC repair."
   },
+  // Location tab will be inserted here
   {
     name: "AC Maintenance",
     key: "ac_maintenance",
@@ -76,9 +77,30 @@ window.addEventListener("DOMContentLoaded", () => {
     title.style.textShadow = "";
   });
 
-  // Render service cards
+  // Render service cards and insert location tab after AC Repair
   const grid = document.getElementById("services-grid");
   services.forEach((service, i) => {
+    // Insert location tab after AC Repair (index 1)
+    if (i === 2) {
+      // Location tab as a double-height card
+      const locCard = document.createElement("div");
+      locCard.className = "service-card location-card";
+      locCard.setAttribute("data-aos", "fade-up");
+      locCard.setAttribute("data-aos-delay", 120);
+      locCard.style.gridColumn = "span 2";
+      locCard.innerHTML = `
+        <h3 style="font-size:1.5rem;color:#00bfae;margin-bottom:1rem;">Our Location</h3>
+        <div class="map-responsive" style="height:220px;min-height:120px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114011.4929724082!2d80.80549644335936!3d26.74887030000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfb040aae5a69%3A0xf83f45d208507f1f!2sCooling%20Centre!5e0!3m2!1sen!2sin!4v1747994965667!5m2!1sen!2sin"
+            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p style="margin-top:1rem;">
+          <a href="https://goo.gl/maps/TVSGRKq" target="_blank" class="cta-btn">View on Google Maps</a>
+        </p>
+      `;
+      grid.appendChild(locCard);
+    }
+
     getImagePath(service.key, (imgPath) => {
       const delay = 50 + i * 50;
       const waMsg = encodeURIComponent(service.wa);
